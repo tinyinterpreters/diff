@@ -1,6 +1,6 @@
 # DIFF
 
-An interpreter in Elm for evaluating constants, i.e. non-negative integers.
+An interpreter in Elm for evaluating difference expressions, i.e. subtraction.
 
 ## Usage
 
@@ -9,6 +9,6 @@ $ nix develop
 $ elm repl
 
 > import DIFF.Interpreter as I
-> I.run "123"
-Ok (VNumber 123) : Result I.Error I.Value
+> I.run "-(456, 123)"
+Ok (VNumber 333) : Result I.Error I.Value
 ```
