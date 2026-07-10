@@ -1,7 +1,7 @@
-module CONST.Interpreter exposing (Error(..), Value(..), run)
+module DIFF.Interpreter exposing (Error(..), Value(..), run)
 
-import CONST.AST as AST exposing (..)
-import CONST.Parser as P
+import DIFF.AST as AST exposing (..)
+import DIFF.Parser as P
 
 
 type Value

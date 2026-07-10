@@ -1,4 +1,4 @@
-module CONST.AST exposing
+module DIFF.AST exposing
     ( Expr(..)
     , Number
     , Program(..)

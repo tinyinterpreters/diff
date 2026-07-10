@@ -1,4 +1,4 @@
-module CONST.Lexer exposing (digits, spaces)
+module DIFF.Lexer exposing (digits, spaces)
 
 import Parser as P exposing ((|.), (|=), Parser)
 

@@ -1,7 +1,7 @@
-module CONST.Parser exposing (Error, parse)
+module DIFF.Parser exposing (Error, parse)
 
-import CONST.AST as AST exposing (..)
-import CONST.Lexer as L
+import DIFF.AST as AST exposing (..)
+import DIFF.Lexer as L
 import Parser as P exposing ((|.), (|=), Parser)
 
 

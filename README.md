@@ -1,4 +1,4 @@
-# CONST
+# DIFF
 
 An interpreter in Elm for evaluating constants, i.e. non-negative integers.
 
@@ -8,7 +8,7 @@ An interpreter in Elm for evaluating constants, i.e. non-negative integers.
 $ nix develop
 $ elm repl
 
-> import CONST.Interpreter as I
+> import DIFF.Interpreter as I
 > I.run "123"
 Ok (VNumber 123) : Result I.Error I.Value
 ```
