@@ -11,6 +11,7 @@ type Program
 
 type Expr
     = Const Number
+    | Diff Expr Expr
 
 
 type alias Number =

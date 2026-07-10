@@ -32,3 +32,6 @@ runExpr expr =
     case expr of
         Const n ->
             VNumber n
+
+        Diff _ _ ->
+            VNumber 0
