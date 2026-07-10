@@ -33,5 +33,12 @@ runExpr expr =
         Const n ->
             VNumber n
 
-        Diff _ _ ->
-            VNumber 0
+        Diff a b ->
+            evalDiff (runExpr a) (runExpr b)
+
+
+evalDiff : Value -> Value -> Value
+evalDiff va vb =
+    case ( va, vb ) of
+        ( VNumber a, VNumber b ) ->
+            VNumber <| a - b
