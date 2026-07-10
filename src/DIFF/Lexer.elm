@@ -1,4 +1,4 @@
-module DIFF.Lexer exposing (digits, spaces)
+module DIFF.Lexer exposing (digits, spaces, symbol)
 
 import Parser as P exposing ((|.), (|=), Parser)
 
@@ -16,6 +16,11 @@ chompOneOrMore isGood =
     P.succeed ()
         |. P.chompIf isGood
         |. P.chompWhile isGood
+
+
+symbol : String -> Parser ()
+symbol =
+    lexeme << P.symbol
 
 
 lexeme : Parser a -> Parser a
