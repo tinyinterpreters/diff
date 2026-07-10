@@ -45,7 +45,7 @@ diffExpr =
     P.succeed Diff
         |. L.symbol "-"
         |. L.symbol "("
-        |= expr
+        |= P.lazy (\_ -> expr)
         |. L.symbol ","
-        |= expr
+        |= P.lazy (\_ -> expr)
         |. L.symbol ")"
