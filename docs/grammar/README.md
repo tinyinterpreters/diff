@@ -12,10 +12,12 @@ Program  ::= Expr
 
 ```
 Expr     ::= Const
+           | Diff
 ```
 
 referenced by:
 
+* Diff
 * Program
 
 **Const:**
@@ -24,6 +26,18 @@ referenced by:
 
 ```
 Const    ::= Number
+```
+
+referenced by:
+
+* Expr
+
+**Diff:**
+
+![Diff](diagram/Diff.svg)
+
+```
+Diff     ::= '-' '(' Expr ',' Expr ')'
 ```
 
 referenced by:
