@@ -24,7 +24,10 @@ program =
 
 expr : Parser Expr
 expr =
-    constExpr
+    P.oneOf
+        [ constExpr
+        , diffExpr
+        ]
 
 
 constExpr : Parser Expr
@@ -35,3 +38,14 @@ constExpr =
 number : Parser Number
 number =
     L.digits
+
+
+diffExpr : Parser Expr
+diffExpr =
+    P.succeed Diff
+        |. L.symbol "-"
+        |. L.symbol "("
+        |= expr
+        |. L.symbol ","
+        |= expr
+        |. L.symbol ")"
