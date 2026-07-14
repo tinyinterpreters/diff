@@ -16,6 +16,7 @@ suite =
                 , ( "123  ", Just (VNumber 123) )
                 , ( " 123", Just (VNumber 123) )
                 , ( "  123", Just (VNumber 123) )
+                , ( "123abc", Nothing )
                 , ( "onetwothree", Nothing )
 
                 -- Difference expressions

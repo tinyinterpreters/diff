@@ -6,7 +6,7 @@ import Test exposing (Test, test)
 
 testValue : (String -> Result e a) -> ( String, Maybe a ) -> Test
 testValue f ( input, expectedOutput ) =
-    test ("\"" ++ input ++ "\"") <|
+    test (Debug.toString input) <|
         \_ ->
             case f input of
                 Ok value ->
@@ -16,8 +16,8 @@ testValue f ( input, expectedOutput ) =
                     else
                         Expect.fail <|
                             Debug.toString
-                                { expected = Debug.toString expectedOutput
-                                , actual = Debug.toString value
+                                { expected = expectedOutput
+                                , actual = value
                                 }
 
                 Err e ->
