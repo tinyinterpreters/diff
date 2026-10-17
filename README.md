@@ -16,7 +16,9 @@ That one change introduces recursion throughout the grammar, AST, parser, and ev
 
 For a closer look, read [DIFF: When Expressions Contain Expressions](https://blog.tinyinterpreters.dev/posts/diff/).
 
-To try it, you'll need [Nix](https://zero-to-nix.com/start/install/) with flakes enabled.
+## Try it
+
+You'll need [Nix](https://nixos.org/) with flakes enabled.
 
 ```bash
 nix develop
